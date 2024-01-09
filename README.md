@@ -19,6 +19,4 @@ GDorks Dracul é um aplicativo desenvolvido para Windows que simplifica a busca 
 3. Escolha a categoria de dork desejada.
 4. Copie a dork para a barra de pesquisa do Google e execute a busca.
 
-Aprimore suas habilidades de pesquisa no Google com o GDorks Dracul. Simplifique e otimize suas pesquisas online de forma rápida e fácil.
-
 ---
