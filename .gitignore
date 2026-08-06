@@ -1,0 +1,8 @@
+# Build artifacts
+src/bin/
+src/obj/
+*.user
+
+# Python
+__pycache__/
+*.pyc

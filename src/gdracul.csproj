@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Projeto WinForms .NET Framework 4.7.2.
+    - No Windows:  dotnet build -c Release   (ou abrir no Visual Studio)
+    - No Linux:    use ./build.sh  (compila com o Mono/mcs)
+    O exe gerado e self-contained: icones e imagens ficam embutidos.
+  -->
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>gdracul</AssemblyName>
+    <RootNamespace>gdracul_project</RootNamespace>
+    <ApplicationIcon>assets\dragon.ico</ApplicationIcon>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>true</Deterministic>
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="assets\dragon.ico"><LogicalName>dragon.ico</LogicalName></EmbeddedResource>
+    <EmbeddedResource Include="assets\dragon.png"><LogicalName>dragon.png</LogicalName></EmbeddedResource>
+    <EmbeddedResource Include="assets\dragon_header.png"><LogicalName>dragon_header.png</LogicalName></EmbeddedResource>
+    <EmbeddedResource Include="assets\search.png"><LogicalName>search.png</LogicalName></EmbeddedResource>
+    <EmbeddedResource Include="assets\category.png"><LogicalName>category.png</LogicalName></EmbeddedResource>
+  </ItemGroup>
+
+</Project>

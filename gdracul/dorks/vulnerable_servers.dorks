@@ -25,7 +25,7 @@ intitle:"-N3t" filetype:php undetectable
 inurl:/wp-content/w3tc/dbcache/
 ext:cgi inurl:cgi-bin intext:#!/bin/bash
 inurl:/proc/self/cwd
-inurl:/elfinder/elfinder.html+intitle:"elFinder 2.0" 	
+inurl:/elfinder/elfinder.html+intitle:"elFinder 2.0"
 inurl:shop "Hassan Consulting's Shopping Cart Version 1.18"
 "YaBB SE Dev Team"
 intitle:"Gallery in Configuration mode"
@@ -51,7 +51,6 @@ filetype:cgi inurl:"fileman.cgi"
 inurl:"index.php?module=ew_filemanager"
 allinurl:"index.php" "site=sglinks"
 intext:"Warning: * am able * write ** configuration file" "includes/configure.php" -Forums
-intitle:phpMyAdmin "Welcome to phpMyAdmin ***" "running on * as root@*"
 natterchat inurl:home.asp -site:natterchat.co.uk
 inurl:aol*/_do/rss_popup?blogID=
 (inurl:/shop.cgi/page=) | (inurl:/shop.pl/page=)
@@ -103,3 +102,27 @@ site: target.com ext:action | ext:struts | ext:do
 intext:"Powered By Gila CMS"
 intitle:"Wing FTP Server - Web"
 intitle:"Vulnerability Report" "Critical" ext:pdf
+inurl:RichWidgets/Popup_Upload.aspx
+intext:"user name" intext:"orion core" -solarwinds.com
+inurl /editor/filemanager/connectors/uploadtest.html
+intitle:"Icecast Streaming Media Server" "Icecast2 Status" -.com
+intitle:"index of" "/views/auth/passwords"
+intitle:"TileServer GL - Server for vector and raster maps with GL styles"
+inurl:adm/login.jsp.bak
+intitle:"HFS" AND intext:"httpfileserver 2.3" AND -intext:"remote"
+inurl:"/geoserver/ows?service=wfs"
+inurl:install.php intitle:"Froxlor Server Management Panel - Installation"
+Apache Struts 2.x Path Traversal Vulnerability (CVE-2023-50164) Detection Dork
+intitle:"OpenVpn Status Monitor"
+intitle:"Installation Wizard - PowerCMS v2"
+intitle:"Welcome to iTop version" wizard
+allintitle:"Bright Cluster Manager" site:.edu
+"PMB" AND ("changelog.txt" OR inurl:opac_css)
+Google Dorks for Default XAMPP Dashboards
+inurl:"wa.exe?TICKET"
+intitle:"FileCatalyst file transfer solution"
+allintitle:"ITRS OP5 Monitor"
+Google Dork Submisson For GlobalProtect Portal
+intext:"siemens" & inurl:"/portal/portal.mwsl"
+intitle:"SSL Network Extender Login" -checkpoint.com
+inurl:"cgi-bin/koha"

@@ -1,22 +1,95 @@
 # GDorks Dracul
 
-![GDorks Dracul](https://github.com/fabiosilvamonteiro/gdorks-dracul-desktop/assets/6267452/a11ab297-bed3-4821-a94e-e1dd00ef7644)
+**Google Dork Searcher Engine** — um aplicativo desktop que organiza e pesquisa
+Google Dorks por categoria, usando a base oficial **GHDB (Google Hacking
+Database)** do Exploit-DB.
 
-GDorks Dracul é um aplicativo desenvolvido para Windows que simplifica a busca por informações de vulnerabilidades no Google através da utilização de dorks. Dorks são consultas avançadas que permitem refinar os resultados da pesquisa, proporcionando uma abordagem mais eficiente e específica.
+![GDorks Dracul](src/assets/dragon.png)
 
-## Recursos Principais
+> Dorks são consultas avançadas do Google que refinam os resultados de busca,
+> permitindo reconhecimento (OSINT) mais eficiente e específico. Uso destinado a
+> testes de segurança **autorizados**, pesquisa e educação.
 
-- **Ampla Variedade de Dorks:** O GDorks Dracul oferece uma extensa lista de dorks prontas para serem utilizadas, abrangendo diferentes categorias e cenários de pesquisa.
+## Novidades da v2.0
 
-- **Interface Intuitiva:** A interface do aplicativo é projetada para ser amigável e fácil de usar, permitindo que usuários de todos os níveis de habilidade possam tirar o máximo proveito das funcionalidades oferecidas.
+- 🐉 **Novo visual** com o dragão do DracuCybersec como ícone do app e da janela.
+- 🔎 **Dorks atualizadas** (~7.800) direto das 14 categorias da GHDB do Exploit-DB.
+- 🐧 **Roda no Linux** (via Mono) e no Windows — o bug de caminho com `\` do
+  Windows foi corrigido (agora usa `Path.Combine`, sem precisar de `MONO_IOMAP`).
+- 🧱 **Código-fonte incluído** (`src/`) — antes o repositório só tinha o binário.
+- 🔁 **Script de atualização** das dorks (`tools/update_dorks.py`).
+- 🖥️ **Layout refeito** — todos os ícones e controles se enquadram corretamente.
 
-- **Google Hacking:** Com o GDorks Dracul, você pode aprimorar suas pesquisas no Google, filtrando resultados de maneira mais precisa e obtendo informações específicas de forma eficiente.
+## Recursos
 
-## Como Usar
+- **14 categorias** da GHDB: Footholds, Files Containing Usernames, Sensitive
+  Directories, Web Server Detection, Vulnerable Files, Vulnerable Servers, Error
+  Messages, Files Containing Juicy Info, Files Containing Passwords, Sensitive
+  Online Shopping Info, Network or Vulnerability Data, Pages Containing Login
+  Portals, Various Online Devices, Advisories and Vulnerabilities.
+- **Filtro em tempo real** por texto.
+- **Copiar** a dork para a área de transferência.
+- **Abrir no Google** (duplo-clique, Enter ou botão) — funciona em Windows e
+  Linux (`xdg-open`).
 
-1. Faça o download do aplicativo para Windows.
-2. Abra o GDorks Dracul em seu computador.
-3. Escolha a categoria de dork desejada.
-4. Copie a dork para a barra de pesquisa do Google e execute a busca.
+## Como usar
 
----
+1. Escolha a **categoria** no seletor.
+2. (Opcional) digite no **filtro** para refinar.
+3. Selecione uma dork e clique em **Copy to Clipboard** ou **Open in Google**
+   (ou dê duplo-clique na linha).
+
+## Executando
+
+### Windows
+Baixe/clone o repositório e execute `gdracul.exe`. A pasta `gdracul/dorks/`
+precisa ficar **ao lado** do executável.
+
+### Linux (Kali/Debian) via Mono
+```bash
+sudo apt install -y mono-complete libgdiplus
+mono gdracul.exe
+```
+
+## Compilando a partir do código
+
+O executável é self-contained (ícones/imagens embutidos).
+
+### Linux (Mono)
+```bash
+cd src
+./build.sh          # gera ../gdracul.exe
+```
+
+### Windows / .NET
+```bash
+cd src
+dotnet build -c Release
+```
+
+## Atualizando as dorks
+
+As dorks vêm da GHDB do Exploit-DB. Para baixar as versões mais recentes:
+
+```bash
+pip install ftfy          # opcional, corrige acentuação de registros antigos
+python3 tools/update_dorks.py
+```
+
+Isso regrava os 14 arquivos `gdracul/dorks/*.dorks` e o `google_dorks.json`.
+
+## Estrutura
+
+```
+gdracul.exe               # aplicativo (rebuild via src/build.sh)
+gdracul/dorks/*.dorks     # dorks por categoria (uma por linha)
+gdracul/dorks/google_dorks.json
+src/                      # código-fonte C# (WinForms)
+tools/update_dorks.py     # atualizador das dorks (GHDB)
+```
+
+## Créditos
+
+Desenvolvido por **Dracul** — [draculcybersec.com](https://www.draculcybersec.com)
+· Dorks: [Exploit-DB GHDB](https://www.exploit-db.com/google-hacking-database)
+· [Buy me a coffee](https://www.buymeacoffee.com/dracul)

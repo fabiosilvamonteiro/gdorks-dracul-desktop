@@ -3,7 +3,7 @@ intitle:MyShell 1.1.0 build 20010923
 inurl:polly/CP
 "Please re-enter your password It must match exactly"
 "index of /" ( upload.cfm | upload.asp | upload.php | upload.cgi | upload.jsp | upload.pl )
-(intitle:"WordPress ÃƒÂ¢Ã¢â€šÂ¬Ã‚Âº Setup Configuration File")|(inurl:"setup-config.php?step=")
+(intitle:"WordPress › Setup Configuration File")|(inurl:"setup-config.php?step=")
 inurl:"amfphp/browser/servicebrowser.swf"
 intitle:"uploader by ghost-dz" ext:php
 intitle:"WSO 2.4" [ Sec. Info ], [ Files ], [ Console ], [ Sql ], [ Php ], [ Safe mode ], [ String tools ], [ Bruteforce ], [ Network ], [ Self remove ]
@@ -117,3 +117,5 @@ inurl:"/plugins/servlet/Wallboard/"
 mail/u/0 filetype:pdf
 intitle:"index of" "httpd.pid"
 inurl:wsnavigator/jsps
+inurl:maps.arcgis.com +"City of"
+inurl:adminpanel site:gov.*

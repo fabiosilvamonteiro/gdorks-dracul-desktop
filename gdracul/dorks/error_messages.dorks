@@ -41,7 +41,6 @@ intitle:"500 Internal Server Error" "server at"
 "You have an error in your SQL syntax near"
 "Supplied argument is not a valid MySQL result resource"
 "ORA-00936: missing expression"
-"ORA-00921: unexpected end of SQL command"
 "ORA-00933: SQL command not properly ended"
 "Unclosed quotation mark before the character string"
 "Incorrect syntax near"
@@ -121,3 +120,4 @@ intitle:"index of" errors.log
 intitle:"index of" "my-errors.log" OR "my-errors.logs"
 intitle:"index of" "stacktrace.log"
 intext:"Error Occurred While Processing Request"
+"Lucee" "Error (expression)" -lucee.org
